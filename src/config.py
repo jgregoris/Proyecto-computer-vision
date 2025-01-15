@@ -4,6 +4,7 @@ from pathlib import Path
 class Config:
     BASE_DIR = Path(__file__).parent.parent.resolve()
     DATA_DIR = BASE_DIR / "data"
+    VIDEOS_DIR = BASE_DIR / "videos"
     DATASET_DIR = BASE_DIR / "datasets" / "OpenLogo-Dataset"
     PROCESSED_DATA_DIR = DATA_DIR / "processed"
     YOLOV5_DIR = BASE_DIR / "yolov5"

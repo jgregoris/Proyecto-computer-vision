@@ -30,10 +30,10 @@ logo-detection-project/
 │       └── weights/
 ├── results/
 ├── src/
-│   ├── app6.py               # Interfaz web Streamlit
+│   ├── app.py               # Interfaz web Streamlit
 │   ├── preprocessing.py      # Utilidades de preprocesamiento
 │   ├── train.py             # Script de entrenamiento
-│   └── video_detection_8.py  # Módulo de procesamiento de video
+│   └── video_detection.py  # Módulo de procesamiento de video
 ├── uploaded_videos/
 └── yolov5/                   # Submódulo YOLOv5
 ```
@@ -85,13 +85,13 @@ python src/train.py --epochs 100 --batch-size 16 --img-size 640
 ### Ejecutando la Interfaz Web
 
 ```bash
-streamlit run src/app6.py
+streamlit run src/app.py
 ```
 
 ### Procesando un Video
 
 ```python
-from video_detection_8 import detect_logo_in_video
+from video_detection import detect_logo_in_video
 
 resultados = detect_logo_in_video(
     video_path="ruta/al/video.mp4",
